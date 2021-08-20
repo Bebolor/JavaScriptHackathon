@@ -1,4 +1,14 @@
-// 3. Create a calculator
+/* 3. Create a calculator 
+Create a calculator that allows a user to send 2 numbers, the type of operation and return the result.
+
+Example:
+
+calculator(2, 10, "+"); // 12
+
+calculator(20, 3, "*"); // 60
+
+calculator(10, 0, "/") // Cannot divide by 0 */
+
 function calculator(num1, num2, operator) {
     if(operator === "+") {
         console.log(num1 + num2);

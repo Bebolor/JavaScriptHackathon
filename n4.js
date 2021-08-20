@@ -1,4 +1,14 @@
-// 4. Social distancing
+/* 4. Social distancing 
+
+In OOP, create a class Distanciation to create a circle that accept one argument: the radius. Based on this radius, you should be able to create 1 method to get the area of this security circle (PI*r^2) and another one to get the perimeter (2PI*r).
+
+Example:
+
+const socialDistancing = new Distanciation(5);
+
+socialDistancing.getArea(); // 78.53
+
+socialDistancing.getPerimeter() // 31.41*/
 
 class Distanciation {
     constructor(radius) {
