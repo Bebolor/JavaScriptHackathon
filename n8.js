@@ -1,6 +1,19 @@
-/*8. myFilter
-Define a myFilter function that simulates the filter method on Array.
+//8. myFilter
 
-Similar implementation than myEach. You can use your own myEach.
+const myArr = [1,2,3,4,5];
 
-DO NOT USE filter, but you can use your own myEach. */
+const myFilter = (myArray,myFunction)=>{
+    let newArray = [];
+    for(let i=0;i<myArray.length;i++){
+        if(myFunction(myArray[i])){
+            newArray.push(myArray[i])
+        }
+    }
+    return newArray;
+}
+
+const checkEven = numb => numb%2===0;
+
+console.log(myFilter(myArr,checkEven));
+console.log(myArr);
+
