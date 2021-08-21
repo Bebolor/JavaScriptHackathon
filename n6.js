@@ -1,9 +1,4 @@
-/* 6. myEach
-Define a myEach function that simulates the forEach method on Array.
-
-myEach should be a function that expects an array and a function.
-
-DO NOT USE forEach in the implementation.*/
+// 6. myEach
 
 const myArr = [1,2,3,4,5];
 

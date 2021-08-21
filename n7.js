@@ -1,6 +1,15 @@
-/* 7. myMap
-Define a myMap function that simulates the map method on Array.
+// 7. myMap
 
-Similar implementation as myEach. You can use your own myEach.
+const myArr = [1,2,3,4,5];
 
-DO NOT USE map, but you can use your own myEach.*/
+const multiplyBy2 = number => number*2; 
+
+const myMap = (myArray,myFunction) => {
+    let newArray = [];
+    for(let i=0;i<myArray.length;i++){
+        newArray.push(myFunction(myArray[i]))
+    }
+    return newArray;
+}
+
+console.log(myMap(myArr,multiplyBy2));

@@ -1,14 +1,4 @@
-/* 5. Rectangle Intersection
-
-Write a function that expects two rectangles and returns the intersected rectangle (if any).
-
-Each rectangle is represented by two points in a two dimensional space.
-
-For example: [1, 1] and [4, 3]. Is the rectangle with point the corners at [1, 1], [4, 1], [1, 3] and [4, 3].
-
-intersect([[1, 1], [4, 3]], [[2, 2], [6, 7]]); // => [2, 2], [4, 3]
-intersect([[2, 1], [4, 4]], [[1, 1], [8, 8]]); // => [2, 1], [4, 4] */
-
+// 5. Rectangle Intersection
 
 const intersect = (rect1,rect2)=>{
     const r1 = {x:rect1[0][0],
