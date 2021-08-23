@@ -1,9 +1,5 @@
-/*11. Min, Max, Length and Average
-Return the smallest and highest value of an array as well as its length and its average value. Make use of the reducer method.
+//11. Min, Max, Length and Average
 
-Example:
-
-console.log(minMaxLengthAverage([7, 13, 3, 77, 100])); // [ 3, 100, 5, 40 ] */
 
 function minMaxLengthAverage(arr) {
     let lowNum = arr[0];
