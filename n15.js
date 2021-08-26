@@ -1,6 +1,6 @@
 //15. Print the Century
 
-function century(year) {
+function century (year) {
     return Math.floor((year-1)/100) + 1;
 }
 
