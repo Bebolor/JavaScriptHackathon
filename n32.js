@@ -1,19 +1,25 @@
 //32. Basketball 
 
-basket([
+const basket = (arg) => {
+    if ((arg[1][0][2] === '0') || (arg[1][0][3] === '0') || (arg[1][0][4] === '0')) return true;
+    else return false;
+}
+
+
+console.log(basket([
     [' ##### '],
     [' # 0 # '],
     [' ##### ']
-]); // true
+])); // true
 
-basket([
+console.log(basket([
     [' ##### '],
     [' #0  # '],
     [' ##### ']
-]); // true
+])); // true
 
-    basket([
+console.log(basket([
     [' ##### '],
     ['0#   # '],
     [' ##### ']
-]); // false
+])); // false
