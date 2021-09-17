@@ -24,15 +24,31 @@ const pyramid2 = [[2],
 //  9 \6\ 4 5 2
 // 8 5 \9\ 3 7 1
 
-const pyramidLongestSlideDown = (pyr) => {
-  const slideLength = 0;
-  const slidePath = [];
-  for (let i = 0; i < pyr.length; i++) {}
+const pyramidLongestSlideDown = (pyra) => {
+    let pathLength = 0;
+    let path = 'Slide path: [';
+    let maxValue = 0;
+    let lastMaxIndex;
+
+    pyra.forEach(stage => {
+        if (stage.length <= 1) {
+            maxValue = Math.max(...stage);
+            pathLength += maxValue;
+            path += ` ${maxValue} `;
+        } else {
+            maxValue = Math.max(...stage.slice(lastMaxIndex, lastMaxIndex + 2));
+            pathLength += maxValue;
+            path += `-> ${maxValue} `;
+        }
+        lastMaxIndex = stage.indexOf(maxValue);
+    });
+    path += ']';
+    return `Slide length: ${pathLength}\r\n${path}`;
 };
 
-pyramidLongestSlideDown(pyramid1);
+console.log(pyramidLongestSlideDown(pyramid1));
 // Slide length: 20
 // Slide path: [ 2 -> 8 -> 3 -> 7 ]
-pyramidLongestSlideDown(pyramid2);
+console.log(pyramidLongestSlideDown(pyramid2));
 // Slide length: 40
 // Slide path: [ 2 -> 6 -> 9 -> 8 -> 6 -> 9 ]
