@@ -28,7 +28,30 @@ const enigma = {
     z: 's'
 }
 
-encrypt('attack') // 'mhhmfp'
+const encrypt = (message) => {
+    const words = message.split(' ');
+    return words.map((word) => {
+        return word.split('').map((letter) => { return enigma[letter]}).join('');
+    }).join(' ');
+};
+
+const decrypt = (encrypted_message) => {
+    const words = encrypted_message.split(' ');
+    const decrypted = words.map((word) => {
+        return word.split('').map((letter) => {
+            for (const key in enigma) {
+                if (enigma[key] === letter) {
+                    return key;
+                }
+            }
+        }).join('');
+    }).join(' ');
+    return decrypted;
+};
+
+
+
+console.log(encrypt('attack')) // 'mhhmfp'
 
 encrypt('fire in the hole') // 'nxec xq hwc wodc'
 
