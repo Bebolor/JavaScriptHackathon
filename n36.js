@@ -53,6 +53,6 @@ const decrypt = (encrypted_message) => {
 
 console.log(encrypt('attack')) // 'mhhmfp'
 
-encrypt('fire in the hole') // 'nxec xq hwc wodc'
+console.log(encrypt('fire in the hole')) // 'nxec xq hwc wodc'
 
-decrypt('x eofp ho bcfegrh mdd hwcvc clcefxvcv') // 'i rock to decrypt all these exercises'
+console.log(decrypt('x eofp ho bcfegrh mdd hwcvc clcefxvcv')) // 'i rock to decrypt all these exercises'
