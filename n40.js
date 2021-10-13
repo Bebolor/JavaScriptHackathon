@@ -1,31 +1,42 @@
 //40. Sort you contacts
-sortContacts([
+const sortContacts = (array, order) => {
+    if(!array) return [];
+    if(!order) return "Please choose how to sort your contacts";
+
+    return array.sort((element1, element2) => {
+        const last1 = element1.split(' ')[1];
+        const last2 = element2.split(' ')[1];
+        return ((order === "ASC") ? (last1 > last2 ? 1 : -1) : (last1 < last2 ? 1 : -1))
+    });  
+}
+
+console.log(sortContacts([
     "Bat Man",
     "Bat Girl",
     "Dean Rouflaquette",
     "Albert Musketeer",
     "Captain America"
-], "ASC")
+], "ASC"))
 // ['Captain America','Bat Girl','Bat Man','Albert Musketeer','Dean Rouflaquette']
 
-sortContacts([
+console.log(sortContacts([
     "Boutros Boutros-Ghali",
     "Kofi Annan",
     "Ban Ki-moon",
     "António Guterres"
-], "DESC")
+], "DESC"))
 // ['Ban Ki-moon','António Guterres','Boutros Boutros-Ghali','Kofi Annan']
 
-sortContacts([], "DESC") // []
+console.log(sortContacts([], "DESC")) // []
 
-sortContacts(null, "DESC") // []
+console.log(sortContacts(null, "DESC")) // []
 
-sortContacts(undefined, "DESC") // []
+console.log(sortContacts(undefined, "DESC")) // []
 
-sortContacts([
+console.log(sortContacts([
     "Bat Man",
     "Bat Girl",
     "Dean Rouflaquette",
     "Albert Musketeer",
     "Captain America"
-]) // "Please choose how to sort your contacts"
+])) // "Please choose how to sort your contacts"
