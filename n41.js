@@ -19,20 +19,20 @@ const ticTacToe = array => {
     return "Draw. Play again"
     }  
 
-ticTacToe([
+console.log(ticTacToe([
     ["X", "O", "X"],
     ["O", "X",  "O"],
     ["O", "X",  "X"]
-]) // "Winner: X"
+])) // "Winner: X"
 
-ticTacToe([
+console.log(ticTacToe([
     ["O", "O", "O"],
     ["O", "X", "X"],
     ["E", "X", "X"]
-]) // "Winner: O"
+])) // "Winner: O"
 
-ticTacToe([
+console.log(ticTacToe([
     ["X", "X", "O"],
     ["O", "O", "X"],
     ["X", "X", "O"]
-]) // "Draw. Play again"
+])) // "Draw. Play again"
